@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理者查詢預約記錄</title>
-</head>
-<body>
+    <title>重要儀器查詢</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- 嵌入datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
     
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+
+    <!--  -->
+    <link rel="stylesheet" href="manage.css">
+
+</head>
+
+<body >
+    
+    <div class="bgcolor shadow blackline">   
+    <table id="myTable" class="display hover ">
+        
+        <h1 id="title">重要儀器查詢 </h1>
+        <thead class="content">
+        
+        <!-- 欄位標題 -->
+            <tr class="content">
+                <th >歌曲</th>
+                <th>收入專輯</th>
+                <th>發行時間</th>
+            </tr>
+        </thead>
+        <tbody class="content">
+        <!-- 資料內容 -->
+            <tr>
+            <!-- tablerow -->
+                <td>簡單愛</td>
+                <td>范特西</td>
+                <td>2001年9月14日</td>
+            </tr>
+            <tr>
+                <td>菊花台</td>
+                <td>七里香</td>
+                <td>2004年8月3日</td>
+            </tr>
+            <tr>
+                <td>青花瓷</td>
+                <td>魔杰座</td>
+                <td>2008年10月15日</td>
+            </tr>
+            <tr>
+                <td>稻香</td>
+                <td>依然范特西</td>
+                <td>2006年9月12日</td>
+            </tr>
+            <tr>
+                <td>不能說的秘密</td>
+                <td>依然范特西</td>
+                <td>2006年7月14日</td>
+            </tr>
+            <!-- 6 -->
+            <tr>
+                <td>夜曲</td>
+                <td>葉惠美</td>
+                <td>2003年8月5日</td>
+            </tr>
+            <tr>
+                <td>楓</td>
+                <td>十一月的蕭邦</td>
+                <td>2005年11月1日</td>
+            </tr>
+            <tr>
+                <td>東風破</td>
+                <td>七里香</td>
+                <td>2004年7月30日</td>
+            </tr>
+            <tr>
+                <td>聽媽媽的話</td>
+                <td>依然范特西</td>
+                <td>2006年7月18日</td>
+            </tr>
+            <tr>
+                <td>千里之外</td>
+                <td>十一月的蕭邦</td>
+                <td>2005年11月1日</td>
+            </tr>
+            <!-- 11 -->
+            <tr>
+                <td>以父之名</td>
+                <td>魔杰座</td>
+                <td>2008年10月15日</td>
+            </tr>
+            <tr>
+                <td>七里香</td>
+                <td>七里香</td>
+                <td>2004年8月3日</td>
+            </tr>
+            <tr>
+                <td>聽見下雨的聲音</td>
+                <td>范特西</td>
+                <td>2001年9月14日</td>
+            </tr>
+            <tr>
+                <td>愛在西元前</td>
+                <td>范特西</td>
+                <td>2001年7月6日</td>
+            </tr>
+            <tr>
+                <td>外婆</td>
+                <td>范特西</td>
+                <td>2001年7月6日</td>
+            </tr>
+            <!-- 16 -->
+            <tr>
+                <td>手寫的從前</td>
+                <td>十二新作</td>
+                <td>2012年12月28日</td>
+            </tr>
+            <tr>
+                <td>你好嗎 </td>
+                <td>十二新作</td>
+                <td>2012年12月28日</td>
+            </tr>
+        </tbody>
+    
+    </table>
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
+    </div>
 </body>
+
 </html>
+
