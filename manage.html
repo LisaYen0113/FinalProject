@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>重要儀器查詢</title>
+    <title>後台管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,107 +24,116 @@
     <div class="bgcolor shadow blackline">   
     <table id="myTable" class="display hover ">
         
-        <h1 id="title">重要儀器查詢 </h1>
+        <h1 id="title">後台管理-已租借設備</h1>
         <thead class="content">
         
         <!-- 欄位標題 -->
             <tr class="content">
-                <th >歌曲</th>
-                <th>收入專輯</th>
-                <th>發行時間</th>
+                <th>儀器名稱</th>
+                <th>租借時段</th>
+                <th>訂單金額</th>
+                <th>姓名</th>
+                <th>Gmail</th>
+                <th>電話</th>
             </tr>
         </thead>
         <tbody class="content">
         <!-- 資料內容 -->
             <tr>
             <!-- tablerow -->
-                <td>簡單愛</td>
-                <td>范特西</td>
-                <td>2001年9月14日</td>
+                 <th>類流式影像自動擷取定量系統</th>
+                 <td>2024/06/11 10:00-12:00</td>
+                 <td id="money">$1600</td>
+                 <td>陳曉華</td>
+                 <td>chenxiaohua@gmail.com</td>
+                 <td>0912345678</td>
+            </tr>
+
+            <tr>
+                <th>雷射共軛焦顯微鏡</th>
+                <td>2024/06/01 10:00-12:00</td>
+                <td id="money">$1500</td>
+                <td>王小明</td>
+                <td>wangxiaoming@gmail.com</td>
+                <td>0912345678</td>
             </tr>
             <tr>
-                <td>菊花台</td>
-                <td>七里香</td>
-                <td>2004年8月3日</td>
+                <th>超高內涵組織掃描暨分析系統</th>
+                <td>2024/06/02 14:00-16:00</td>
+                <td id="money">$1800</td>
+                <td>李小華</td>
+                <td>lixiaohua@gmail.com</td>
+                <td>0923456789</td>
             </tr>
             <tr>
-                <td>青花瓷</td>
-                <td>魔杰座</td>
-                <td>2008年10月15日</td>
+                <th>細胞內離子偵測系統</th>
+                <td>2024/06/03 09:00-11:00</td>
+                <td id="money">$1200</td>
+                <td>張美麗</td>
+                <td>zhangmeili@gmail.com</td>
+                <td>0934567890</td>
             </tr>
             <tr>
-                <td>稻香</td>
-                <td>依然范特西</td>
-                <td>2006年9月12日</td>
+                <th>數位化聚合酶反應分析系統</th>
+                <td>2024/06/04 15:00-17:00</td>
+                <td id="money">$2000</td>
+                <td>陳大中</td>
+                <td>chendazhong@gmail.com</td>
+                <td>0945678901</td>
             </tr>
             <tr>
-                <td>不能說的秘密</td>
-                <td>依然范特西</td>
-                <td>2006年7月14日</td>
-            </tr>
-            <!-- 6 -->
-            <tr>
-                <td>夜曲</td>
-                <td>葉惠美</td>
-                <td>2003年8月5日</td>
+                <th>多色流式細胞分選儀</th>
+
+                <td>2024/06/05 13:00-15:00</td>
+                <td id="money">$1700</td>
+                <td>劉大偉</td>
+                <td>liudaiwei@gmail.com</td>
+                <td>0956789012</td>
             </tr>
             <tr>
-                <td>楓</td>
-                <td>十一月的蕭邦</td>
-                <td>2005年11月1日</td>
+                <th>多重因子檢測分析平台</th>
+
+                <td>2024/06/06 11:00-13:00</td>
+                <td id="money">$1600</td>
+                <td>何雅婷</td>
+                <td>heyating@gmail.com</td>
+                <td>0967890123</td>
             </tr>
             <tr>
-                <td>東風破</td>
-                <td>七里香</td>
-                <td>2004年7月30日</td>
+                <th>精準醫學核酸品質鑑定專用儀</th>
+
+                <td>2024/06/07 08:00-10:00</td>
+                <td id="money">$1400</td>
+                <td>吳俊傑</td>
+                <td>wujunjie@gmail.com</td>
+                <td>0978901234</td>
             </tr>
             <tr>
-                <td>聽媽媽的話</td>
-                <td>依然范特西</td>
-                <td>2006年7月18日</td>
+                <th>多層次螢光影像擷取</th>
+                <td>2024/06/08 16:00-18:00</td>
+                <td id="money">$1900</td>
+                <td>周凱文</td>
+                <td>zhoukaiwen@gmail.com</td>
+                <td>0989012345</td>
             </tr>
             <tr>
-                <td>千里之外</td>
-                <td>十一月的蕭邦</td>
-                <td>2005年11月1日</td>
-            </tr>
-            <!-- 11 -->
-            <tr>
-                <td>以父之名</td>
-                <td>魔杰座</td>
-                <td>2008年10月15日</td>
+                <th>螢光共振能量轉移顯微系統</th>
+
+                <td>2024/06/09 12:00-14:00</td>
+                <td id="money">$1300</td>
+                <td>孫美芳</td>
+                <td>sunmeifang@gmail.com</td>
+                <td>0990123456</td>
             </tr>
             <tr>
-                <td>七里香</td>
-                <td>七里香</td>
-                <td>2004年8月3日</td>
+                <th>正立螢光顯微鏡</th>
+                <td>2024/06/10 10:00-12:00</td>
+                <td id="money">$2200</td>
+                <td>馬英九</td>
+                <td>mayingjiu@gmail.com</td>
+                <td>0901234567</td>
             </tr>
-            <tr>
-                <td>聽見下雨的聲音</td>
-                <td>范特西</td>
-                <td>2001年9月14日</td>
-            </tr>
-            <tr>
-                <td>愛在西元前</td>
-                <td>范特西</td>
-                <td>2001年7月6日</td>
-            </tr>
-            <tr>
-                <td>外婆</td>
-                <td>范特西</td>
-                <td>2001年7月6日</td>
-            </tr>
-            <!-- 16 -->
-            <tr>
-                <td>手寫的從前</td>
-                <td>十二新作</td>
-                <td>2012年12月28日</td>
-            </tr>
-            <tr>
-                <td>你好嗎 </td>
-                <td>十二新作</td>
-                <td>2012年12月28日</td>
-            </tr>
+
         </tbody>
     
     </table>

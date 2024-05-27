@@ -5,7 +5,8 @@ body{
     /* border: 1px solid black; */
     
     /*最外面往裡面推  */
-    margin:50px 200px 50px 200px; 
+    /* margin:50px 200px 50px 200px;  */
+    margin:5%; 
 } 
 .bgcolor{
     background-color: rgba(255, 255, 255, 0.7)
@@ -22,7 +23,10 @@ body{
 
 
 } 
+#money{
+    text-align: center;
 
+}
 
 #title{
     text-align: center;
@@ -39,7 +43,7 @@ body{
 #myTable th{
     text-align: center;
     /* 5.新增顏色 */
-    color: blue;
+    color: rgb(123, 65, 109);
     /* 6.新增字體 */
     font-family: "新細明體";
     
