@@ -1,44 +1,71 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffecec;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-}
-.nav {
-    position: fixed;
-    top: 50;
-    width: 100%;
-    background-color: #fbd0d0;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-}
+
+.container,
 .footer {
-    position: fixed;
-    bottom: 0;
+    float: left;
     width: 100%;
-    background-color: #b38f8f;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    z-index: 1000;
 }
+
+body {
+    background-image: url(https://www.fju.edu.tw/showImg/focus/focus1684.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+
+    font-family: STHeiti;
+}
+
+.header {
+    background-color: rgba(41, 95, 148, 0.8);
+    line-height: 75px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.header div{
+  display: inline-block;
+  width: 450px;
+}
+
+.head {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav {
+    float: right;
+}
+
+.nav a {
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+}
+
 .content {
-    margin-top: 70px; /* Adjust based on the navbar height */
-    margin-bottom: 40px; /* Adjust based on the footer height */
-    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+
+.footer {
+    background-color: rgba(41, 95, 148, 0.8);
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;   
 }
+
