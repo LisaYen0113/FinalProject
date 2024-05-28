@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pt-serif-bold-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 900 */
+
+.Chinese {
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +42,9 @@
 }
 
 body {
-    background: url(https://www.fju.edu.tw/showImg/focus/focus1684.jpg) no-repeat;
+    background: url(https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
 }
 
@@ -19,10 +55,9 @@ body {
     left: 0;
     width: 100%;
     padding: 20px; */
-    background: rgba(41, 95, 148, 0.8);
+    /* background: rgba(41, 95, 148, 0.8); */
     padding: 20px 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     z-index: 99;
     /* 原本
@@ -32,48 +67,72 @@ body {
 }
 
 .header h1 {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     /* font-size: 40px; */
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2.4em;
     user-select: none;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+
     /* 
     display: inline-block;
     padding-left: 20px; */
+
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: 850;
+    font-style: normal;
 }
 
-.header div {
-    width: 400px;
+.nav {
+    width: 700x;
+    justify-content: center;
+    margin-left: 250px;
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .nav a {
     position: relative;
     font-size: 1.1em;
-    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
     margin-left: 45px;
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
-.nav a::after{
+.nav a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -6px;
     width: 100%;
     height: 3px;
-    background: white;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     transform: scaleX(0);
     transition: transform .5s;
 }
 
-.nav a:hover::after{
+.nav a:hover::after {
     transform: scaleX(1);
 }
+
+button {
+    margin-left: 30px;
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .content {
     margin-right: 100px;
     margin-left: 100px;
@@ -81,12 +140,12 @@ a {
     margin-bottom: 30px;
 }
 
-.wrapper{
+.wrapper {
     backdrop-filter: blur(20px);
 }
 
 .footer {
-    background-color: rgba(41, 95, 148, 0.8);
+    /* background-color: rgba(41, 95, 148, 0.8); */
     color: rgb(255, 255, 255);
     line-height: 25px;
     display: flex;

@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <!--Logo、導覽列-->
+    <!--導覽列-->
     <div class="header">
         <h1>輔大貴重儀器預約系統</h1>
         <div class="nav">
+            <a href="frontPage.html" target="contentFrame">首頁</a>
             <a href="instrument.html" target="contentFrame">儀器查詢</a>
             <a href="record.html" target="contentFrame">預約紀錄</a>
             <a href="manage.html" target="contentFrame">後台管理</a>
         </div>
-        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="@mdo">登入/註冊</button>
     </div>
     <!--登錄-->
@@ -27,7 +28,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">預約者登入</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close Chinese" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -61,7 +62,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">預約者註冊</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <a href="index.html" type="button" class="btn-close"></a>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -75,6 +76,11 @@
                             <label for="exampleFormControlSelect1">密碼設定</label>
                             <input type="text" class="form-control" name="password" id="password" required />
                         </div>
+                        <div class="mb-3">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <label for="exampleFormControlSelect1">確認密碼</label>
+                            <input type="text" class="form-control" name="password" id="password" required />
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -86,7 +92,7 @@
     </div>
     <!--iframe-->
     <div class="content">
-        <iframe name="contentFrame" src="instrument.html" width="100%" height="1000"></iframe>
+        <iframe name="contentFrame" src="frontPage.html" width="100%" height="800"></iframe>
     </div>
     <!--footer-->
     <div class="footer">
