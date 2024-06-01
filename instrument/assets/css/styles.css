@@ -7,7 +7,8 @@
     /*Color mode HSL(hue, saturation, lightness)*/
     --white-color: hsl(170, 12%, 98%);
     --gray-color: hsl(170, 4%, 60%);
-    --black-color: hsl(170, 12%, 8%);
+  
+    /* --black-color: hsl(170, 12%, 8%); */
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -80,9 +81,15 @@
 
   .card__data {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
     transition: transform .4s, opacity .4s;
+    margin-top: auto; /* 調整與卡片底部的距離 */
+  }
+
+  .card__data > * {
+    margin-bottom: 10px; /* 添加一些間距，使得兩行之間有空隙 */
   }
 
   .card__title {
