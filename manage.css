@@ -31,10 +31,11 @@ body{
 #title{
     text-align: center;
     font-weight: bold;
+    color: rgb(40, 141, 230);
     /* 2.新增斜體 */
-    font-style: italic;
+    /* font-style: italic; */
     /* 3.新增底線 */
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* 4.新增字母間距 */
     letter-spacing: 3px;
     
@@ -43,7 +44,7 @@ body{
 #myTable th,#maTable th{
     text-align: center;
     /* 5.新增顏色 */
-    color: rgb(123, 65, 109);
+    /* color: rgb(123, 65, 109); */
     /* 6.新增字體 */
     font-family: "新細明體";
     
@@ -52,7 +53,20 @@ body{
     text-align: center;
     border: 1px solid black;
 
+}
 
+#exampleModalCenter{
+    text-align: center;
+    /* 5.新增顏色 */
+    color: rgb(123, 65, 109);
+    /* 6.新增字體 */
+    font-family: "新細明體";
+}
+/* .a{
+    color: blueviolet;
+    background-color: red;
+} */
+#exampleModalLongTitle{
 
-
+    text-align: center;
 }
