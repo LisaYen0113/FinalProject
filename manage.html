@@ -24,18 +24,30 @@
     <div class="bgcolor shadow blackline">   
     <table id="myTable" class="display hover ">
         
-        <h1 id="title">後台管理-已租借設備</h1>
+        <h1 id="title">後台管理-借出設備</h1>
         <thead class="content">
         
         <!-- 欄位標題 -->
+        <tr class="content">
+            <th colspan="3">儀器相關事項 </th>
+            <!-- <td> </td>
+            <td> </td> -->
+            <th colspan="3">租借者個人資料</th>
+            <th>其它</th>
+
+        </tr>
             <tr class="content">
                 <th>儀器名稱</th>
-                <th>租借時段</th>
-                <th>訂單金額</th>
+                <th>借出時間</th>
+                <!-- <th>歸還時間</th> -->
+                <th>付款金額</th>
                 <th>姓名</th>
                 <th>Gmail</th>
                 <th>電話</th>
+                <th>提醒</th>
+                
             </tr>
+            
         </thead>
         <tbody class="content">
         <!-- 資料內容 -->
@@ -141,6 +153,11 @@
         $(document).ready( function () {
             $('#myTable').DataTable();
         } );
+//         new DataTable('#myTable', {
+//     paging: false,
+//     scrollCollapse: true,
+//     scrollY: '500px'
+// });
     </script>
     </div>
 </body>
