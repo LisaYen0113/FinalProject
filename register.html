@@ -10,9 +10,14 @@
 
 <body>
     <div class="wrapper">
-        <div class="form-box login">
-            <h2>登入</h2>
+        <div class="form-box register">
+            <h2>註冊</h2>
             <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                     <input type="email" required>
@@ -25,20 +30,40 @@
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">
-                        Remember me
+                        I agree to the terms & conditions
                     </label>
-                    <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Register</button>
                 <div class="login-register">
-                    <p>Don't have an account?<a href="register.html" class="regist-link">
-                        Register
+                    <p>Already have an account?<a href="#" class="regist-link">
+                        Login
                     </a></p>
                 </div>
             </form>
         </div>
     </div>
+    <style>
+        .wrapper{
+            height: 480px;
+        }
+    </style>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.wrapper');
+            const loginLink = document.querySelector('.login-link');
+            const registerLink = document.querySelector('.register-link');
 
+            registerLink.addEventListener('click', () => {
+                wrapper.classList.add('active');
+            });
+            
+            loginLink.addEventListener('click', () => {
+                wrapper.classList.remove('active');
+            });
+        });
+    </script>
+    <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
