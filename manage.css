@@ -40,7 +40,7 @@ body{
     
 }
 
-#myTable th{
+#myTable th,#maTable th{
     text-align: center;
     /* 5.新增顏色 */
     color: rgb(123, 65, 109);
@@ -48,7 +48,7 @@ body{
     font-family: "新細明體";
     
 }
-#myTable {
+#myTable,#maTable {
     text-align: center;
     border: 1px solid black;
 

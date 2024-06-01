@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>預約紀錄</title>
+    <title>後台管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
     <div class="bgcolor shadow blackline">   
     <table id="myTable" class="display hover ">
         
-        <h1 id="title">預約紀錄</h1>
+        <h1 id="title">後台管理-已繳費設備</h1>
         <thead class="content">
         
         <!-- 欄位標題 -->
@@ -57,92 +57,65 @@
                 <td>wangxiaoming@gmail.com</td>
                 <td>0912345678</td>
             </tr>
-            <tr>
-                <th>超高內涵組織掃描暨分析系統</th>
-                <td>2024/06/02 14:00-16:00</td>
-                <td id="money">$1800</td>
-                <td>李小華</td>
-                <td>lixiaohua@gmail.com</td>
-                <td>0923456789</td>
-            </tr>
-            <tr>
-                <th>細胞內離子偵測系統</th>
-                <td>2024/06/03 09:00-11:00</td>
-                <td id="money">$1200</td>
-                <td>張美麗</td>
-                <td>zhangmeili@gmail.com</td>
-                <td>0934567890</td>
-            </tr>
-            <tr>
-                <th>數位化聚合酶反應分析系統</th>
-                <td>2024/06/04 15:00-17:00</td>
-                <td id="money">$2000</td>
-                <td>陳大中</td>
-                <td>chendazhong@gmail.com</td>
-                <td>0945678901</td>
-            </tr>
-            <tr>
-                <th>多色流式細胞分選儀</th>
 
-                <td>2024/06/05 13:00-15:00</td>
-                <td id="money">$1700</td>
-                <td>劉大偉</td>
-                <td>liudaiwei@gmail.com</td>
-                <td>0956789012</td>
-            </tr>
-            <tr>
-                <th>多重因子檢測分析平台</th>
+        </tbody>
+    
+    </table>
+</div>
+<br>
+<br>
+<br>
 
-                <td>2024/06/06 11:00-13:00</td>
-                <td id="money">$1600</td>
-                <td>何雅婷</td>
-                <td>heyating@gmail.com</td>
-                <td>0967890123</td>
+<div class="bgcolor shadow blackline">   
+    <table id="maTable" class="display hover ">
+        
+        <h1 id="title">後台管理-未繳費設備</h1>
+        <thead class="content">
+        
+        <!-- 欄位標題 -->
+            <tr class="content">
+                <th>儀器名稱</th>
+                <th>租借時段</th>
+                <th>訂單金額</th>
+                <th>姓名</th>
+                <th>Gmail</th>
+                <th>電話</th>
             </tr>
+        </thead>
+        <tbody class="content">
+        <!-- 資料內容 -->
             <tr>
-                <th>精準醫學核酸品質鑑定專用儀</th>
+            <!-- tablerow -->
+                 <th>類流式影像自動擷取定量系統</th>
+                 <td>2024/06/11 10:00-12:00</td>
+                 <td id="money">$1600</td>
+                 <td>陳曉華</td>
+                 <td>chenxiaohua@gmail.com</td>
+                 <td>0912345678</td>
+            </tr>
 
-                <td>2024/06/07 08:00-10:00</td>
-                <td id="money">$1400</td>
-                <td>吳俊傑</td>
-                <td>wujunjie@gmail.com</td>
-                <td>0978901234</td>
-            </tr>
             <tr>
-                <th>多層次螢光影像擷取</th>
-                <td>2024/06/08 16:00-18:00</td>
-                <td id="money">$1900</td>
-                <td>周凱文</td>
-                <td>zhoukaiwen@gmail.com</td>
-                <td>0989012345</td>
-            </tr>
-            <tr>
-                <th>螢光共振能量轉移顯微系統</th>
-
-                <td>2024/06/09 12:00-14:00</td>
-                <td id="money">$1300</td>
-                <td>孫美芳</td>
-                <td>sunmeifang@gmail.com</td>
-                <td>0990123456</td>
-            </tr>
-            <tr>
-                <th>正立螢光顯微鏡</th>
-                <td>2024/06/10 10:00-12:00</td>
-                <td id="money">$2200</td>
-                <td>馬英九</td>
-                <td>mayingjiu@gmail.com</td>
-                <td>0901234567</td>
+                <th>雷射共軛焦顯微鏡</th>
+                <td>2024/06/01 10:00-12:00</td>
+                <td id="money">$1500</td>
+                <td>王小明</td>
+                <td>wangxiaoming@gmail.com</td>
+                <td>0912345678</td>
             </tr>
 
         </tbody>
     
     </table>
+</div>
     <script>
         $(document).ready( function () {
             $('#myTable').DataTable();
         } );
+        $(document).ready( function () {
+            $('#maTable').DataTable();
+        } );
     </script>
-    </div>
+
 </body>
 
 </html>
