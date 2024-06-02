@@ -3,15 +3,13 @@ p {
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
-    text-indent: 32px;
-    /* text-decoration: underline;
-    letter-spacing: 2px; */
 }
 
 #footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 #footer a {
@@ -19,6 +17,30 @@ p {
 }
 
 #calendar {
-    height: 400px;
-    
+    height: 500px;
+    width: 500px;
 }
+
+/* 表單 */
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      height: 500px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+  
