@@ -69,9 +69,9 @@
   </div>
 
   <div id="footer">
-    <a href="instrument/index.html"><button type="button" class="btn btn-secondary">回上一頁</button>
+    <a href="instrument/index.html"><button type="button" class="btn btn-secondary">回儀器查詢頁面</button>
     </a>
-    <a href="calendar.html"><button type="button" class="btn btn-primary">線上租借</button>
+    <a href="#"><button type="button" class="btn btn-primary">線上租借</button>
     </a>
   </div>
 
@@ -155,7 +155,7 @@
 
       function updateAvailableTimes(date) {
         // 清空之前的时间选项
-        timeSelect.innerHTML = '<option value="">请选择一个时间段</option>';
+        timeSelect.innerHTML = '<option value="">請選擇時間段</option>';
 
         // 这里我们假设每一天的可用时间段是固定的，可以根据需要调整
         const availableTimes = [

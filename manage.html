@@ -44,7 +44,7 @@
                 <th>姓名</th>
                 <th>Gmail</th>
                 <th>電話</th>
-                <th>提醒</th>
+                <th>提醒歸還</th>
                 
             </tr>
             
@@ -59,6 +59,9 @@
                  <td>陳曉華</td>
                  <td>chenxiaohua@gmail.com</td>
                  <td>0912345678</td>
+                 <td><button class="button reminderButton">催繳</button>
+                 </td>
+
             </tr>
 
             <tr>
@@ -68,6 +71,9 @@
                 <td>王小明</td>
                 <td>wangxiaoming@gmail.com</td>
                 <td>0912345678</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
+
             </tr>
             <tr>
                 <th>超高內涵組織掃描暨分析系統</th>
@@ -76,6 +82,9 @@
                 <td>李小華</td>
                 <td>lixiaohua@gmail.com</td>
                 <td>0923456789</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
+
             </tr>
             <tr>
                 <th>細胞內離子偵測系統</th>
@@ -84,6 +93,9 @@
                 <td>張美麗</td>
                 <td>zhangmeili@gmail.com</td>
                 <td>0934567890</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
+
             </tr>
             <tr>
                 <th>數位化聚合酶反應分析系統</th>
@@ -148,8 +160,252 @@
 
         </tbody>
     
+
+
+    
     </table>
+    </div>
+</div>
+<br>
+<br>
+<br>
+    <div class="bgcolor shadow blackline">   
+    <table id="moTable" class="display hover ">
+        
+        <h1 id="title">後台管理-歸還設備</h1>
+        <thead class="content">
+        
+        <!-- 欄位標題 -->
+            <tr class="content">
+                <th>儀器名稱</th>
+                <th>租借時段</th>
+                <th>訂單金額</th>
+                <th>歸還情況</th>
+                <!-- <th>Gmail</th>
+                <th>電話</th> -->
+            </tr>
+        </thead>
+        <tbody class="content">
+        <!-- 資料內容 -->
+            <tr>
+            <!-- tablerow -->
+                 <th>類流式影像自動擷取定量系統</th>
+                 <td>2024/06/11 10:00-12:00</td>
+                 <td id="money">$1600</td>
+
+                 <td ><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter1">
+                      已歸還
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">歸還明細</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">儀器名字</th>
+                                    <th scope="col">歸還時間</th>
+                                    <th scope="col">是否損壞</th>
+                                    <!-- <th scope="col"></th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th >類流式影像自動擷取定量系統</th>
+                                    <td>2024/06/7 10:03</td>
+                                    <td>否</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </td>
+
+                 <!-- <td>陳曉華</td>
+                 <td>chenxiaohua@gmail.com</td>
+                 <td>0912345678</td> -->
+            </tr>
+
+            <tr>
+                <th>雷射共軛焦顯微鏡</th>
+                <td>2024/06/01 10:00-12:00</td>
+                <td id="money">$1500</td>
+                <td ><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                      已繳費
+                    </button>
+                    
+                    <!-- Modal1 -->
+                    <div class="modal fade1" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered1" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">歸還明細</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table">
+                                  <thead class="thead-dark">
+                                    <tr>
+                                      <th scope="col">儀器名字</th>
+                                      <th scope="col">歸還時間</th>
+                                      <th scope="col">是否損壞</th>
+                                      <!-- <th scope="col"></th> -->
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th >類流式影像自動擷取定量系統</th>
+                                      <td>2024/06/7 10:02</td>
+                                      <td>否</td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </td>
+                <!-- <td>王小明</td> -->
+                <!-- <td>wangxiaoming@gmail.com</td>
+                <td>0912345678</td> -->
+            </tr>
+
+            <tr>
+                <!-- tablerow -->
+                     <th>類流式影像自動擷取定量系統</th>
+                     <td>2024/06/11 10:00-12:00</td>
+                     <td id="money">$1600</td>
+                     <td ><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                          已繳費
+                        </button>
+                        
+                        <!-- Modal2 -->
+                        <div class="modal fade2" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered2" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle">歸還明細</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <table class="table">
+                                      <thead class="thead-dark">
+                                        <tr>
+                                          <th scope="col">儀器名字</th>
+                                          <th scope="col">歸還時間</th>
+                                          <th scope="col">是否損壞</th>
+                                          <!-- <th scope="col"></th> -->
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th >類流式影像自動擷取定量系統</th>
+                                          <td>2024/06/7 10:08</td>
+                                          <td>否</td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+    
+    
+                     <!-- <td>陳曉華</td>
+                     <td>chenxiaohua@gmail.com</td>
+                     <td>0912345678</td> -->
+                </tr>
+
+                <tr>
+                    <!-- tablerow -->
+                         <th>類流式影像自動擷取定量系統</th>
+                         <td>2024/06/11 10:00-12:00</td>
+                         <td id="money">$1600</td>
+                         <td ><!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                              已繳費
+                            </button>
+                            
+                            <!-- Modal3 -->
+                            <div class="modal fade3" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle3" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered3" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLongTitle">歸還明細</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <table class="table">
+                                          <thead class="thead-dark">
+                                            <tr>
+                                              <th scope="col">儀器名字</th>
+                                              <th scope="col">歸還時間</th>
+                                              <th scope="col">是否損壞</th>
+                                              <!-- <th scope="col"></th> -->
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th >類流式影像自動擷取定量系統</th>
+                                              <td>2024/06/7 10:07</td>
+                                              <td>否</td>
+                                            </tr>
+                                          </tbody>
+                                      </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </td>
+        
+        
+                         <!-- <td>陳曉華</td>
+                         <td>chenxiaohua@gmail.com</td>
+                         <td>0912345678</td> -->
+                    </tr>
+
+        </tbody>
+    
+    </table>
+</div>
+</div>
+
     <script>
+        $(document).ready( function () {
+            $('#moTable').DataTable();
+        } );
         $(document).ready( function () {
             $('#myTable').DataTable();
         } );
@@ -159,6 +415,22 @@
 //     scrollY: '500px'
 // });
     </script>
+
+<!-- 催繳按鈕 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.reminderButton');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                this.innerHTML = '已催繳';
+                this.classList.add('disabled');
+                this.disabled = true;
+
+                // 在這裡添加你發送催繳請求的代碼，例如使用AJAX請求
+            });
+        });
+    });
+</script>
     </div>
 </body>
 

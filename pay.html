@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="pay.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="paymentForm">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h3 class="title">個人資料</h3>
+
+                    <div class="inputBox">
+                        <span>全名 :</span>
+                        <input type="text" placeholder="john deo">
+                    </div>
+                    <div class="inputBox">
+                        <span>Gmail :</span>
+                        <input type="email" placeholder="example@example.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>學號 :</span>
+                        <input type="text" placeholder="412405264">
+                    </div>
+                    <div class="inputBox">
+                        <span>科系 :</span>
+                        <input type="text" placeholder="呼吸治療學系">
+                    </div>
+
+                </div>
+
+
+                <div class="col">
+
+                    <h3 class="title">信用卡付款</h3>
+
+                    <div class="inputBox">
+                        <span>可接受卡片 :</span>
+                        <img src="car_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>卡片名字 :</span>
+                        <input type="text" placeholder="mr. john deo">
+                    </div>
+                    <div class="inputBox">
+                        <span>卡號 :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>到期月份/年份 :</span>
+                            <input type="text" placeholder="12/2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="ribbons.html" class="submit-btn">付款</a>
+
+        </form>
+        <script>
+            function handleSubmit(event) {
+                // 阻止默认的提交行为
+                event.preventDefault();
+
+                // 这里模拟支付成功的情况，实际情况应该是根据你的逻辑来判断支付是否成功
+                var paymentSuccess = true;
+
+                if (paymentSuccess) {
+                    // 显示支付成功的弹出式窗口
+                    alert("支付成功！");
+                    // Redirect to homepage
+                    window.location.href = "index.html"; // Replace "homepage.html" with the actual URL of your homepage
+                } else {
+                    // 支付失败的情况
+                    alert("支付失败，请重试！");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+
+    
