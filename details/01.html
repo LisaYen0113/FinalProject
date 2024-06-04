@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- 嵌入datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <!--calendar-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.13/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <!--自設-->
+    <link rel="stylesheet" href="all.css" />
+</head>
+
+<body style="background-color:transparent">
+
+    <div class="flex-container">
+        <img src="https://crrd.kmu.edu.tw/images/instruments/BD-LSR2.png">
+        <h2>高階13色流式細胞儀 LSR II Flow Cytometer</h2>
+        <hr>
+        <p>管理人：李曉婷<br />分機：2371#22</p>
+    </div>  
+
+    <hr>
+    <br/>
+
+    <u>
+        <h2>收費標準</h2>
+    </u>
+    <table class="table" id="a">
+        <thead class="thead-light">
+            <tr>
+                <th colspan="3" align="center">分析項目</th>
+                <!-- <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>高階流式細胞分析儀(LSR II)</td>
+                <td>校內自行上機 (150元/30分鐘)</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+
+    <u>
+        <h2>儀器預約現況</h2>
+    </u>
+    <div id='calendar'></div>
+    <br/>
+
+    <u>
+        <h2>租借說明</h2>
+    </u>
+    <p>
+        OLYMPUS & ZEISS 共軛焦顯微鏡預約時段為： (1) 08:00～11:00。 (2) 11:00～14:00。 (3) 14:00～17:00<br/>
+        <br/>
+        Real-Time PCR 7500 預約時段為： (1) 09:00～12:00。 (2) 12:00～15:00。 (3) 15:00～18:00<br/>
+        <br/>
+        QuantStudio 5 Real-Time PCR 預約時段為：(1) 08:30-11:00。(2) 11:00-13:30。(3) 13:30-16:00。(4) 16:00-18:30<br/>
+        <br/>
+        NMR 預約時段：採每30分鐘為一個時段，最長時段可預約120分鐘。Overnight實驗預約，同一實驗室為單位不得連續超過2次。<br/>
+        <br />
+        ※ 每週預約以個儀器預約時段為限，如須超過者，請與管理人員聯繫。<br/>
+        <br/>
+        ※ 使用超過17：30之使用者，請洽各儀器管理人設定儀器門禁進出權限。<br/>
+        <br />
+        ※ 請各使用者務必在時段內預約！<br/>
+    </p>
+    <br/>
+
+    <u>
+        <h2>申請相關附件</h2>
+    </u>
+    <div class="doclink">
+        <span class="icon"><ion-icon name="link-outline"></ion-icon></span>
+        <a href="https://crrd.kmu.edu.tw/images/ActivityNewsFile/Equip-Booking-User.pdf">中心預約系統 ─ 操作教學手冊
+            (預約使用者版)</a><br />
+        <span class="icon"><ion-icon name="link-outline"></ion-icon></span>
+        <a href="https://crrd.kmu.edu.tw/images/ActivityNewsFile/Equip-Booking-Admin.pdf">操作教學手冊 (儀器管理者版)</a>
+    </div>
+    <br/>
+    
+    <div id="footer">
+        <a href="../instrument/index.html"><button type="button" class="btn btn-secondary">回上一頁</button>
+        </a>
+        <a href="../calendar.html"><button type="button" class="btn btn-primary">線上租借</button>
+        </a>
+    </div>
+
+    <!--ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var calendarEl = document.getElementById('calendar');
+    
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            initialDate: '2024-06-02',
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: [
+              {
+                title: '醫研所',
+                /*url: '#',*/
+                start: '2024-06-04T13:00:00',
+                end: '2024-06-04T17:00:00'
+              },
+              {
+                title: '醫研所',
+                start: '2024-06-08T13:00:00',
+                end: '2024-06-08T17:00:00'
+              },
+              {
+                title: '天藥所',
+                start: '2024-06-11T16:00:00',
+                end: '2024-06-11T17:30:00'
+              },
+              {
+                title: '天藥所',
+                start: '2024-06-18T16:00:00',
+                end: '2024-06-18T17:30:00'
+              }
+            ]
+          });
+    
+          calendar.render();
+        });
+      </script>
+</body>
+</html>

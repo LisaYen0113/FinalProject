@@ -133,9 +133,6 @@ button {
     margin-bottom: 30px;
 }
 
-.wrapper {
-    backdrop-filter: blur(20px);
-}
 
 .footer {
     /* background-color: rgba(41, 95, 148, 0.8); */
