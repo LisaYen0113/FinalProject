@@ -15,8 +15,9 @@
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #ffffff 60%, #27ae60 40.1%);
+  background: transparent; /* 將背景設置為透明 */
 }
+
 
 .container form{
   padding:20px;
@@ -96,7 +97,7 @@
 /* 最後面 */
 
 /* 彩帶特效 */
-.confetti-container {
+/* .confetti-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -120,4 +121,4 @@
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
-
+ */

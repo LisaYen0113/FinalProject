@@ -5,31 +5,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Payment Page</title>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="pay.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.5s;
+        }
 
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.5s ease-in-out;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .modal-content img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-content p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .modal-content .description {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
-
-        <form id="paymentForm">
-
+        <form id="paymentForm" onsubmit="handleSubmit(event)">
             <div class="row">
-
                 <div class="col">
-
                     <h3 class="title">個人資料</h3>
-
                     <div class="inputBox">
-                        <span>全名 :</span>
-                        <input type="text" placeholder="john deo">
+                        <span>姓 :</span>
+                        <input type="text" placeholder="王">
+                    </div>
+                    <div class="inputBox">
+                        <span>名 :</span>
+                        <input type="text" placeholder="子棋">
                     </div>
                     <div class="inputBox">
                         <span>Gmail :</span>
-                        <input type="email" placeholder="example@example.com">
+                        <input type="email" placeholder="kiki@example.com">
                     </div>
                     <div class="inputBox">
                         <span>學號 :</span>
@@ -41,12 +131,8 @@
                     </div>
 
                 </div>
-
-
                 <div class="col">
-
                     <h3 class="title">信用卡付款</h3>
-
                     <div class="inputBox">
                         <span>可接受卡片 :</span>
                         <img src="car_img.png" alt="">
@@ -59,7 +145,10 @@
                         <span>卡號 :</span>
                         <input type="number" placeholder="1111-2222-3333-4444">
                     </div>
-
+                    <div class="inputBox">
+                        <span>金額 :</span>
+                        <input type="number" placeholder="1600">
+                    </div>
                     <div class="flex">
                         <div class="inputBox">
                             <span>到期月份/年份 :</span>
@@ -70,37 +159,92 @@
                             <input type="text" placeholder="1234">
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-            <a href="ribbons.html" class="submit-btn">付款</a>
-
+            <button type="submit" class="submit-btn">付款</button>
         </form>
-        <script>
-            function handleSubmit(event) {
-                // 阻止默认的提交行为
-                event.preventDefault();
-
-                // 这里模拟支付成功的情况，实际情况应该是根据你的逻辑来判断支付是否成功
-                var paymentSuccess = true;
-
-                if (paymentSuccess) {
-                    // 显示支付成功的弹出式窗口
-                    alert("支付成功！");
-                    // Redirect to homepage
-                    window.location.href = "index.html"; // Replace "homepage.html" with the actual URL of your homepage
-                } else {
-                    // 支付失败的情况
-                    alert("支付失败，请重试！");
-                }
-            }
-        </script>
     </div>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="https://img.icons8.com/ios-filled/100/4caf50/ok--v1.png" alt="Success">
+            <p>支付成功！</p>
+            <p class="description">您的支付已成功。感謝您的付款！我們將盡快處理。</p>
+            <p id="redirectMessage">您將在 <span id="redirectCountdown">4</span> 秒后返回首頁...</p>
+        </div>
+    </div>
+
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            var paymentSuccess = true; // Simulating payment success
+            if (paymentSuccess) {
+                showModal();
+                launchConfetti();
+                var secondsLeft = 4;
+                var countdownInterval = setInterval(() => {
+                    secondsLeft--;
+                    document.getElementById('redirectCountdown').textContent = secondsLeft;
+                    if (secondsLeft <= 0) {
+                        clearInterval(countdownInterval);
+                        window.location.href = "index.html";
+                    }
+                }, 1000); // Update message every second
+            } else {
+                alert("支付失败，请重试！");
+            }
+        }
+
+
+        function showModal() {
+            var modal = document.getElementById("successModal");
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("successModal");
+            modal.style.display = "none";
+        }
+
+        // Close the modal when the user clicks anywhere outside of it
+        window.onclick = function (event) {
+            var modal = document.getElementById("successModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function launchConfetti() {
+            var duration = 2 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 3,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 3,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    </script>
 </body>
 
 </html>
-
-
-    
