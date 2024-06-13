@@ -172,7 +172,7 @@
             <img src="https://img.icons8.com/ios-filled/100/4caf50/ok--v1.png" alt="Success">
             <p>支付成功！</p>
             <p class="description">您的支付已成功。感謝您的付款！我們將盡快處理。</p>
-            <p id="redirectMessage">您將在 <span id="redirectCountdown">4</span> 秒后返回首頁...</p>
+            <p id="redirectMessage">您將在 <span id="redirectCountdown">3</span> 秒後返回繳費頁面...</p>
         </div>
     </div>
 
@@ -188,13 +188,15 @@
             if (paymentSuccess) {
                 showModal();
                 launchConfetti();
-                var secondsLeft = 4;
+                var secondsLeft = 3;
                 var countdownInterval = setInterval(() => {
                     secondsLeft--;
                     document.getElementById('redirectCountdown').textContent = secondsLeft;
                     if (secondsLeft <= 0) {
                         clearInterval(countdownInterval);
-                        window.location.href = "index.html";
+
+                    
+                        window.location.href = "../instrument/index.html"; 
                     }
                 }, 1000); // Update message every second
             } else {
