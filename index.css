@@ -57,6 +57,9 @@ body {
     line-height: 100px;
     padding-top: 20px; 
     margin: 0 auto;*/
+
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .header h1 {
@@ -77,16 +80,24 @@ body {
     font-optical-sizing: auto;
     font-weight: 850;
     font-style: normal;
+
+    margin: 0; 
 }
 
 .nav {
-    width: 700x;
+    width: auto;
     justify-content: center;
-    margin-left: 250px;
+    margin-left: 0;
     font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: center;
 }
 
 .nav a {
@@ -95,6 +106,8 @@ body {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
     margin-left: 45px;
+
+    padding: 10px 5px; 
 }
 
 a {
@@ -119,11 +132,13 @@ a {
 }
 
 button {
-    margin-left: 30px;
+    margin-left: 20px;
     font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+
+    padding: 10px 20px; 
 }
 
 .content {
@@ -141,4 +156,27 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 新增：響應式設計 */
+@media (max-width: 768px) { /* 針對平板 */
+    .header {
+        padding: 15px 50px; /* 修改：減少 padding */
+    }
+
+    .header h1 {
+        font-size: 2em; /* 修改：調整標題大小 */
+    }
+
+    .nav {
+        justify-content: center; /* 修改：居中導航欄 */
+    }
+
+    .nav a {
+        margin-left: 20px; /* 修改：減少導航連結之間的間距 */
+    }
+
+    button {
+        margin-left: 10px; /* 修改：減少按鈕左邊的間距 */
+    }
 }
