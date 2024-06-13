@@ -152,8 +152,6 @@
     });
   </script>
 
-
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const dateInput = document.getElementById('date');
@@ -165,10 +163,10 @@
       });
 
       function updateAvailableTimes(date) {
-        // 清空之前的时间选项
+      
         timeSelect.innerHTML = '<option value="">請選擇時間段</option>';
 
-        // 这里我们假设每一天的可用时间段是固定的，可以根据需要调整
+      
         const availableTimes = [
           '09:00 - 10:00',
           '10:00 - 11:00',
