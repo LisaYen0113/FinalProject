@@ -1,330 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>預約紀錄</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <!-- 嵌入datatable -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
-    
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
 
-    <!--  -->
-    <link rel="stylesheet" href="manage.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>預約紀錄</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <!-- 嵌入datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+
+  <!--  -->
+  <link rel="stylesheet" href="manage.css">
 
 </head>
 
-<body >
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>廖老師您好!</strong> 您仍有四筆項目未完成繳費
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+<body>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>同學您好!</strong> 您仍有兩筆項目未完成繳費
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
 
-      <div class="bgcolor shadow blackline">   
-        <table id="maTable" class="display hover ">
-            
-            <h1 id="title">預約紀錄-未繳費儀器</h1>
-            <thead class="content">
-            
-            <!-- 欄位標題 -->
-                <tr class="content">
-                    <th>儀器名稱</th>
-                    <th>租借時段</th>
-                    <th>訂單金額</th>
-                    <th>前往繳費</th>
-    
-                    <!-- <th>姓名</th>
+  <div class="bgcolor shadow blackline">
+    <table id="maTable" class="display hover ">
+
+      <h1 id="title">預約紀錄-未繳費儀器</h1>
+      <thead class="content">
+
+        <!-- 欄位標題 -->
+        <tr class="content">
+          <th>儀器名稱</th>
+          <th>租借時段</th>
+          <th>訂單金額</th>
+          <th>前往繳費</th>
+
+          <!-- <th>姓名</th>
                     <th>Gmail</th>
                     <th>電話</th> -->
-                </tr>
-            </thead>
-            <tbody class="content">
-            <!-- 資料內容 -->
-                <tr>
-                <!-- tablerow -->
-                     <th>類流式影像自動擷取定量系統</th>
-                     <td>2024/06/11 10:00-12:00</td>
-                     <td id="money">$1600</td>
-                     <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
-    
-                     <!-- <td>陳曉華</td>
+        </tr>
+      </thead>
+      <tbody class="content">
+        <!-- 資料內容 -->
+        <tr>
+          <!-- tablerow -->
+          <th>超高內涵組織掃描暨分析系統</th>
+          <td>2024/03/15 6:00-23:00</td>
+          <td id="money">$1800</td>
+          <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
+
+          <!-- <td>陳曉華</td>
                      <td>chenxiaohua@gmail.com</td>
                      <td>0912345678</td> -->
-                </tr>
-    
-                <tr>
-                    <th>雷射共軛焦顯微鏡</th>
-                    <td>2024/06/01 10:00-12:00</td>
-                    <td id="money">$1500</td>
-                    <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
+        </tr>
 
-                    <!-- <td>王小明</td>
+        <tr>
+          <th>細胞內離子偵測系統</th>
+          <td>2024/07/19 11:00-17:00</td>
+          <td id="money">$1600</td>
+          <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
+
+          <!-- <td>王小明</td>
                     <td>wangxiaoming@gmail.com</td>
                     <td>0912345678</td> -->
-                </tr>
-    
-            </tbody>
-        
-        </table>
-    </div>
-<br>
-<br>
-<br>
-<br>
-    <div class="bgcolor shadow blackline">   
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="bgcolor shadow blackline">
     <table id="myTable" class="display hover ">
-        
-        <h1 id="title">預約紀錄-已繳費設備</h1>
-        <thead class="content">
-        
+
+      <h1 id="title">預約紀錄-已繳費設備</h1>
+      <thead class="content">
+
         <!-- 欄位標題 -->
-            <tr class="content">
-                <th>儀器名稱</th>
-                <th>租借時段</th>
-                <th>訂單金額</th>
-                <th>繳費情況</th>
-                <!-- <th>Gmail</th>
+        <tr class="content">
+          <th>儀器名稱</th>
+          <th>租借時段</th>
+          <th>訂單金額</th>
+          <th>繳費情況</th>
+          <!-- <th>Gmail</th>
                 <th>電話</th> -->
-            </tr>
-        </thead>
-        <tbody class="content">
+        </tr>
+      </thead>
+      <tbody class="content">
         <!-- 資料內容 -->
-            <tr>
-            <!-- tablerow -->
-                 <th>類流式影像自動擷取定量系統</th>
-                 <td>2024/06/11 10:00-12:00</td>
-                 <td id="money">$1600</td>
+        <tr>
+          <!-- tablerow -->
+          <th>多重因子檢測分析平台</th>
+                         <td>2024/06/22 18:00-22:00</td>
+                         <td id="money">$1900</td>
 
-                 <td ><!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
-                      已繳費
+          <td><!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+              已繳費
+            </button>
+
+            <!-- Modal0 -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
                     </button>
-                    
-                    <!-- Modal0 -->
-                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                  <tr>
-                                    <th scope="col">儀器名字</th>
-                                    <th scope="col">預約時間</th>
-                                    <th scope="col">繳費時間</th>
-                                    <th scope="col">金額</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th >類流式影像自動擷取定量系統</th>
-                                    <td>2024/06/1 10:02</td>
-                                    <td>2024/06/1 10:03</td>
-                                    <td id="money">$1600</td>
-                                  </tr>
-                                </tbody>
-                            </table>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </td>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">儀器名字</th>
+                          <th scope="col">預約時間</th>
+                          <th scope="col">繳費時間</th>
+                          <th scope="col">金額</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>類流式影像自動擷取定量系統</th>
+                          <td>2024/06/1 10:02</td>
+                          <td>2024/06/1 10:03</td>
+                          <td id="money">$1600</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
 
-                 <!-- <td>陳曉華</td>
+          <!-- <td>陳曉華</td>
                  <td>chenxiaohua@gmail.com</td>
                  <td>0912345678</td> -->
-            </tr>
+        </tr>
 
-            <tr>
-                <th>雷射共軛焦顯微鏡</th>
+        <tr>
+          <th>雷射共軛焦顯微鏡</th>
+          <td>2024/06/01 10:00-12:00</td>
+          <td id="money">$1800</td>
+          <td><!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+              已繳費
+            </button>
+
+            <!-- Modal2 -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">儀器名字</th>
+                          <th scope="col">預約時間</th>
+                          <th scope="col">繳費時間</th>
+                          <th scope="col">金額</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>多重因子檢測分析平台</th>
+                         <td>2024/06/22 18:00-22:00</td>
+                         <td id="money">$1900</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+
+        <tr>
+          <!-- tablerow -->
+          <th>正立螢光顯微鏡</th>
                 <td>2024/06/01 10:00-12:00</td>
                 <td id="money">$1500</td>
-                <td ><!-- Button trigger modal -->
-                  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
-                    已繳費
-                  </button>
-                  
-                  <!-- Modal2 -->
-                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <table class="table">
-                              <thead class="thead-dark">
-                                <tr>
-                                  <th scope="col">儀器名字</th>
-                                  <th scope="col">預約時間</th>
-                                  <th scope="col">繳費時間</th>
-                                  <th scope="col">金額</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th >類流式影像自動擷取定量系統</th>
-                                  <td>2024/06/1 10:02</td>
-                                  <td>2024/06/1 10:03</td>
-                                  <td id="money">$1600</td>
-                                </tr>
-                              </tbody>
-                          </table>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </td>
+          <td><!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+              已繳費
+            </button>
 
-            <tr>
-                <!-- tablerow -->
-                     <th>類流式影像自動擷取定量系統</th>
-                     <td>2024/06/11 10:00-12:00</td>
-                     <td id="money">$1600</td>
-                     <td ><!-- Button trigger modal -->
-                        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
-                          已繳費
-                        </button>
-                        
-                        <!-- Modal2 -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <table class="table">
-                                    <thead class="thead-dark">
-                                      <tr>
-                                        <th scope="col">儀器名字</th>
-                                        <th scope="col">預約時間</th>
-                                        <th scope="col">繳費時間</th>
-                                        <th scope="col">金額</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <th >類流式影像自動擷取定量系統</th>
-                                        <td>2024/06/1 10:02</td>
-                                        <td>2024/06/1 10:03</td>
-                                        <td id="money">$1600</td>
-                                      </tr>
-                                    </tbody>
-                                </table>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </td>
-    
-    
-                     <!-- <td>陳曉華</td>
+            <!-- Modal2 -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">儀器名字</th>
+                          <th scope="col">預約時間</th>
+                          <th scope="col">繳費時間</th>
+                          <th scope="col">金額</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>類流式影像自動擷取定量系統</th>
+                          <td>2024/06/1 10:02</td>
+                          <td>2024/06/1 10:03</td>
+                          <td id="money">$1600</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <!-- <td>陳曉華</td>
                      <td>chenxiaohua@gmail.com</td>
                      <td>0912345678</td> -->
-                </tr>
+        </tr>
 
-                <tr>
-                    <!-- tablerow -->
-                         <th>類流式影像自動擷取定量系統</th>
-                         <td>2024/06/11 10:00-12:00</td>
-                         <td id="money">$1600</td>
-                         <td ><!-- Button trigger modal -->
-                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
-                              已繳費
-                            </button>
-                            
-                            <!-- Modal3 -->
-                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <table class="table">
-                                        <thead class="thead-dark">
-                                          <tr>
-                                            <th scope="col">儀器名字</th>
-                                            <th scope="col">預約時間</th>
-                                            <th scope="col">繳費時間</th>
-                                            <th scope="col">金額</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <th >類流式影像自動擷取定量系統</th>
-                                            <td>2024/06/1 10:02</td>
-                                            <td>2024/06/1 10:03</td>
-                                            <td id="money">$5</td>
-                                          </tr>
-                                        </tbody>
-                                    </table>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        </td>
-        
-        
-                         <!-- <td>陳曉華</td>
+        <tr>
+          <!-- tablerow -->
+          <th>類流式影像自動擷取定量系統</th>
+                     <td>2024/06/11 10:00-12:00</td>
+                     <td id="money">$1600</td>
+          <td><!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+              已繳費
+            </button>
+
+            <!-- Modal3 -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">儀器名字</th>
+                          <th scope="col">預約時間</th>
+                          <th scope="col">繳費時間</th>
+                          <th scope="col">金額</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>類流式影像自動擷取定量系統</th>
+                          <td>2024/06/1 10:02</td>
+                          <td>2024/06/1 10:03</td>
+                          <td id="money">$5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <!-- <td>陳曉華</td>
                          <td>chenxiaohua@gmail.com</td>
                          <td>0912345678</td> -->
-                    </tr>
+        </tr>
 
-        </tbody>
-    
+      </tbody>
+
     </table>
-</div>
-<br>
-<br>
-<br>
+  </div>
+  <br>
+  <br>
+  <br>
 
 
-    <script>
-        $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
-        $(document).ready( function () {
-            $('#maTable').DataTable();
-        } );
-    </script>
+  <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+    });
+    $(document).ready(function () {
+      $('#maTable').DataTable();
+    });
+  </script>
 
 </body>
 
 </html>
-

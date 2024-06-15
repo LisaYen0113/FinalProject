@@ -41,7 +41,7 @@ body{
     
 }
 
-#myTable th,#maTable,#moTable th{
+#myTable th,#maTable th,#moTable th{
     text-align: center;
     /* 5.新增顏色 */
     /* color: rgb(123, 65, 109); */
