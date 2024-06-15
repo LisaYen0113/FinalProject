@@ -35,7 +35,8 @@
 
 
 body {
-    background: url(https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Uq-QlVQzL9wsyIhA) no-repeat;
+    /* background: url(https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Uq-QlVQzL9wsyIhA) no-repeat; */
+    background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -70,7 +71,7 @@ body {
     user-select: none;
     color: rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
-    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+    /* text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); */
 
     /* 
     display: inline-block;
@@ -151,7 +152,7 @@ button {
 
 .footer {
     /* background-color: rgba(41, 95, 148, 0.8); */
-    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.6);
     line-height: 25px;
     display: flex;
     justify-content: center;
