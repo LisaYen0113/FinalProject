@@ -11,11 +11,12 @@
 
 .container{
   display: flex;
+  top: 0;
   justify-content: center;
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: transparent; /* 將背景設置為透明 */
+  background: transparent; 
 }
 
 

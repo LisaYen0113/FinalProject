@@ -104,6 +104,8 @@
                 <td>陳大中</td>
                 <td>chendazhong@gmail.com</td>
                 <td>0945678901</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>多色流式細胞分選儀</th>
@@ -113,6 +115,8 @@
                 <td>劉大偉</td>
                 <td>liudaiwei@gmail.com</td>
                 <td>0956789012</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>多重因子檢測分析平台</th>
@@ -122,6 +126,8 @@
                 <td>何雅婷</td>
                 <td>heyating@gmail.com</td>
                 <td>0967890123</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>精準醫學核酸品質鑑定專用儀</th>
@@ -131,6 +137,8 @@
                 <td>吳俊傑</td>
                 <td>wujunjie@gmail.com</td>
                 <td>0978901234</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>多層次螢光影像擷取</th>
@@ -139,6 +147,8 @@
                 <td>周凱文</td>
                 <td>zhoukaiwen@gmail.com</td>
                 <td>0989012345</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>螢光共振能量轉移顯微系統</th>
@@ -148,6 +158,8 @@
                 <td>孫美芳</td>
                 <td>sunmeifang@gmail.com</td>
                 <td>0990123456</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
             <tr>
                 <th>正立螢光顯微鏡</th>
@@ -156,6 +168,8 @@
                 <td>馬英九</td>
                 <td>mayingjiu@gmail.com</td>
                 <td>0901234567</td>
+                <td><button class="button reminderButton">催繳</button>
+                </td>
             </tr>
 
         </tbody>
@@ -194,13 +208,60 @@
                  <td id="money">$1600</td>
 
                  <td ><!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter1">
-                      已歸還
-                    </button>
-                    
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
+                  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                    已繳費
+                  </button>
+                  
+                  <!-- Modal2 -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">繳費明細</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <table class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">儀器名字</th>
+                                  <th scope="col">歸還時間</th>
+                                  <th scope="col">是否損壞</th>
+                                  <!-- <th scope="col"></th> -->
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th >類流式影像自動擷取定量系統</th>
+                                  <td>2024/06/7 10:02</td>
+                                  <td>否</td>
+                                </tr>
+                              </tbody>
+                          </table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <!-- tablerow -->
+                   <th>類流式影像自動擷取定量系統</th>
+                   <td>2024/06/11 10:00-12:00</td>
+                   <td id="money">$1600</td>
+              <td ><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                    已繳費
+                  </button>
+                  
+                  <!-- Modal1 -->
+                  <div class="modal fade1" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered1" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">歸還明細</h5>
@@ -221,7 +282,7 @@
                                 <tbody>
                                   <tr>
                                     <th >類流式影像自動擷取定量系統</th>
-                                    <td>2024/06/7 10:03</td>
+                                    <td>2024/06/7 10:02</td>
                                     <td>否</td>
                                   </tr>
                                 </tbody>
@@ -234,11 +295,10 @@
                       </div>
                     </div>
                 </td>
-
-                 <!-- <td>陳曉華</td>
-                 <td>chenxiaohua@gmail.com</td>
-                 <td>0912345678</td> -->
-            </tr>
+              <!-- <td>王小明</td> -->
+              <!-- <td>wangxiaoming@gmail.com</td>
+              <td>0912345678</td> -->
+          </tr>
 
             <tr>
                 <th>雷射共軛焦顯微鏡</th>
