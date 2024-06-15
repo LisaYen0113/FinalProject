@@ -20,8 +20,8 @@
 
    <div class="container">
       <div class="search-container">
-         <input type="text" placeholder="Type..">
-         <button type="submit">search</button>
+        <input type="text" id="search-input" placeholder="Type..">
+        <button type="button" id="search-button">Search</button>
       </div>
       <div class="card__container">
          <article class="card__article">
@@ -637,8 +637,22 @@
                </div><br><br><br><br><br>
 
    </div>
-
-
+   <ul class="listPage pagination"></ul> 
+   <script src="assets/js/script.js">
+      function searchFunction() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.card__article');
+        cards.forEach(card => {
+          const title = card.querySelector('.card__title').textContent.toLowerCase();
+          const price = card.querySelector('.card__price').textContent.toLowerCase();
+          if (title.includes(input) || price.includes(input)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
 
 </body>
 
