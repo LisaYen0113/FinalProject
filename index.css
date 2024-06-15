@@ -85,6 +85,90 @@ body {
     margin: 0; 
 }
 
+/* 右侧固定广告栏样式 */
+.right {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 100px;
+    height: 200px;
+    background-color: rgba(165, 188, 181, 0.776);
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; 
+}
+
+.section i {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 5px;
+    font-size: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 悬浮框样式 */
+.modal {
+    display: none; /* 隐藏 */
+    position: fixed; /* 固定位置 */
+    z-index: 1; /* 在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 可滚动 */
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% 从顶部对齐，中间对齐 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 宽度 */
+    max-width: 400px; /* 最大宽度 */
+    border-radius: 10px; /* 圆角 */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .feedback-form button {
+    width: 10%; 
+    max-width: 100px; 
+    border-radius: 10px; 
+} */
+
 .nav {
     width: auto;
     justify-content: center;
