@@ -156,6 +156,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer iframe{
+    margin-left: 20px;
 }
 
 /* 新增：響應式設計 */
