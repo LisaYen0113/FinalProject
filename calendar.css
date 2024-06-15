@@ -17,7 +17,6 @@
 .content {
   grid-row: 2 / 3;
   grid-column: 1 / span 2;
-  background-color: #E9ECEF;
 }
 
 .left {
@@ -59,6 +58,7 @@ p {
 #calendar {
   height: 500px;
   width: 500px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .right h2 {
@@ -75,10 +75,10 @@ p {
   height: 500px;
   position: relative;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, .5);
+  border: 2px solid rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  color: white;
+  color:  rgba(0, 0, 0, 0.6);
 }
 
 label {
@@ -87,5 +87,5 @@ label {
 }
 
 h2 {
-  color: white;
+  color: rgba(0, 0, 0, 0.6);
 }

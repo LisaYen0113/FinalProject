@@ -35,12 +35,16 @@
     </div>
     <div class="content">
       <p>
-        <font color="#4F9D9D">OLYMPUS & ZEISS 共軛焦顯微鏡預約時段為： (1) 08:00～11:00。 (2) 11:00～14:00。 (3) 14:00～17:00</font>
+        <font color="#4F9D9D"><b>OLYMPUS & ZEISS 共軛焦顯微鏡</b>預約時段為： (1) 08:00～11:00。 (2) 11:00～14:00。 (3) 14:00～17:00
+        </font>
         <br />
-        <font color="#AD5A5A">Real-Time PCR 7500 預約時段為： (1) 09:00～12:00。 (2) 12:00～15:00。 (3) 15:00～18:00<br /></font>
-        <font color="#8080C0">QuantStudio 5 Real-Time PCR 預約時段為：(1) 08:30-11:00。(2) 11:00-13:30。(3) 13:30-16:00。(4)
+        <font color="#AD5A5A"><b>Real-Time PCR 7500 </b>預約時段為： (1) 09:00～12:00。 (2) 12:00～15:00。 (3) 15:00～18:00<br />
+        </font>
+        <font color="#8080C0"><b>QuantStudio 5 Real-Time PCR </b>預約時段為：(1) 08:30-11:00。(2) 11:00-13:30。(3)
+          13:30-16:00。(4)
           16:00-18:30<br /></font>
-        <font color="#AE57A4">NMR 預約時段：採每30分鐘為一個時段，最長時段可預約120分鐘。Overnight實驗預約，同一實驗室為單位不得連續超過2次。<br /></font>
+        <font color="#AE57A4"><b>NMR </b>預約時段：採每30分鐘為一個時段，最長時段可預約120分鐘。<b>Overnight</b>實驗預約，同一實驗室為單位不得連續超過2次。<br />
+        </font>
         <font color="	#A5A552">※ 每週預約以個儀器預約時段為限，如須超過者，請與管理人員聯繫。<br /></font>
         <font color="	#A5A552">※ 使用超過17：30之使用者，請洽各儀器管理人設定儀器門禁進出權限。<br /></font>
         <font color="	#A5A552">※ 請各使用者務必在時段內預約！<br /></font>
@@ -53,7 +57,7 @@
 
     <div class="left">
       <br />
-      <h2>租借時段現況</h2>
+      <h2>租借注意事項</h2>
       <div id='calendar'>
       </div>
 
@@ -64,13 +68,20 @@
       <h2>選擇時段</h2>
       <div class="container">
         <form id="datetime-form">
-          <label for="date">選擇日期:</label>
-          <input type="date" id="date" name="date" required>
+          <label for="meeting-time">選擇日期時間:</label>
+          <input type="datetime-local" id="time" name="meeting-time" value="2024-06-15T09:36" min="2024-06-15T00:00"
+            max="2028-06-15T00:00" />
 
-          <label for="time">選擇時間:</label>
-          <select id="time" name="time" required>
-            <option value="">請選擇時間段</option>
-          </select>
+          <label for="upload-file">上傳相關檔案：</label>
+          <input type="file" id="upload-file">
+
+          <label for="upload-file">備註(無則省略)：</label>
+          <textarea cols="25" rows="2"></textarea>
+
+          <br />
+          <input type="radio" name="agree" required>確認閱讀並同意注意事項<br />
+          <br />
+          <input type="submit" value="送出申請">
         </form>
       </div>
     </div>
@@ -80,12 +91,12 @@
       <div id="footer">
         <a href="instrument/index.html"><button type="button" class="btn btn-secondary">回儀器查詢頁面</button>
         </a>
-        <a href="#"><button type="button" class="btn btn-primary">線上租借</button>
+        <a href="./pay/pay.html"><button type="button" class="btn btn-primary">線上繳費</button>
         </a>
       </div>
     </div>
-  </div>
 
+  </div>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
@@ -100,50 +111,35 @@
         },
         events: [
           {
-            title: 'All Day Event',
-            start: '2024-05-01'
+            title: '生物系',
+            /*url: '#',*/
+            start: '2024-06-03T09:00:00',
+            end: '2024-06-03T17:00:00'
           },
           {
-            title: 'Long Event',
-            start: '2024-05-07',
-            end: '2024-05-10'
+            title: '生物系',
+            start: '2024-06-04T09:00:00',
+            end: '2024-06-04T17:00:00'
           },
           {
-            groupId: '999',
-            title: 'Repeating Event',
-            start: '2024-05-09T16:00:00'
+            title: '生物系',
+            start: '2024-06-05T09:00:00',
+            end: '2024-06-05T17:00:00'
           },
           {
-            groupId: '999',
-            title: 'Repeating Event',
-            start: '2024-05-16T16:00:00'
+            title: 'DVCR',
+            start: '2024-06-06T08:00:00',
+            end: '2024-06-06T17:00:00'
           },
           {
-            title: 'Conference',
-            start: '2024-05-11',
-            end: '2024-05-13'
+            title: '天藥所',
+            start: '2024-06-12T10:00:00',
+            end: '2024-06-12T17:00:00'
           },
           {
-            title: 'Meeting',
-            start: '2024-05-12T10:30:00',
-            end: '2024-05-12T12:30:00'
-          },
-          {
-            title: 'Lunch',
-            start: '2024-05-12T12:00:00'
-          },
-          {
-            title: 'Meeting',
-            start: '2024-05-12T14:30:00'
-          },
-          {
-            title: 'Birthday Party',
-            start: '2024-05-13T07:00:00'
-          },
-          {
-            title: 'Click for Google',
-            url: 'https://google.com/',
-            start: '2024-05-28'
+            title: '天藥所',
+            start: '2024-06-14T10:00:00',
+            end: '2024-06-14T17:00:00'
           }
         ]
       });
