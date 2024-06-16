@@ -242,6 +242,9 @@ button {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .footer iframe{
@@ -249,7 +252,7 @@ button {
 }
 
 /* 新增：響應式設計 */
-@media (max-width: 768px) { /* 針對平板 */
+@media (max-width: 768px) { 
     .header {
         padding: 15px 50px; /* 修改：減少 padding */
     }
