@@ -12,7 +12,34 @@
    <link rel="stylesheet" href="assets/css/styles.css">
    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
+<style>
+   .back-to-top {
+   position: fixed;
+   bottom: 2rem;
+   right: 2rem;
+   display: none;
+   width: 50px;
+   height: 50px;
+   background-color: #007bff;
+   color: #fff;
+   text-align: center;
+   line-height: 50px;
+   border-radius: 50%;
+   transition: background-color 0.3s ease, opacity 0.3s ease;
+   opacity: 0.8;
+   z-index: 1000;
+}
 
+.back-to-top:hover {
+   background-color: #0056b3;
+   opacity: 1;
+}
+
+.back-to-top i {
+   font-size: 24px;
+}
+
+</style>
 
    <title>Insect responsive card - Bedimcode</title>
 </head>
@@ -638,6 +665,29 @@
                </div><br><br><br><br><br>
 
    </div>
+   <a href="#" class="back-to-top">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+   <script>
+      // 當用戶滾動到一定高度時顯示按鈕
+      window.onscroll = function() {
+         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.querySelector('.back-to-top').style.display = 'block';
+         } else {
+            document.querySelector('.back-to-top').style.display = 'none';
+         }
+      };
+   
+      // 點擊按鈕滾動到頁面頂部
+      document.querySelector('.back-to-top').addEventListener('click', function(event) {
+         event.preventDefault();
+         window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+   </script>
+   
+
+
+   <!--  -->
    <!-- <nav aria-label="...">
       <ul class="pagination">
         <li class="page-item disabled">

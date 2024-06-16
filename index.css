@@ -126,42 +126,76 @@ body {
     align-items: center;
 }
 
-/* 悬浮框样式 */
-.modal {
-    display: none; /* 隐藏 */
-    position: fixed; /* 固定位置 */
-    z-index: 1; /* 在其他内容之上 */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* 可滚动 */
-    background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
-}
+        #feedback-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% 从顶部对齐，中间对齐 */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* 宽度 */
-    max-width: 400px; /* 最大宽度 */
-    border-radius: 10px; /* 圆角 */
-}
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Form styling */
+        #feedback-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #feedback-form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #feedback-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            resize: none;
+        }
+
+        #feedback-form button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #758495;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #feedback-form button:hover {
+            background-color: #0056b3;
+        }
 
 /* .feedback-form button {
     width: 10%; 
