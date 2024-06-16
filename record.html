@@ -48,6 +48,7 @@
           <th>租借時段</th>
           <th>訂單金額</th>
           <th>前往繳費</th>
+          <th>取消預約</th>
 
           <!-- <th>姓名</th>
                     <th>Gmail</th>
@@ -62,6 +63,7 @@
           <td>2024/03/15 6:00-23:00</td>
           <td id="money">$1800</td>
           <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
+          <td><button class="button reminderButton">取消</button>
 
           <!-- <td>陳曉華</td>
                      <td>chenxiaohua@gmail.com</td>
@@ -73,7 +75,7 @@
           <td>2024/07/19 11:00-17:00</td>
           <td id="money">$1600</td>
           <td><a class="btn btn-outline-danger" href="../FinalProject/pay/pay.html" role="button">未繳費</a></td>
-
+          <td><button class="button reminderButton">取消</button>
           <!-- <td>王小明</td>
                     <td>wangxiaoming@gmail.com</td>
                     <td>0912345678</td> -->
@@ -99,8 +101,8 @@
           <th>租借時段</th>
           <th>訂單金額</th>
           <th>繳費情況</th>
-          <!-- <th>Gmail</th>
-                <th>電話</th> -->
+          <th>取消預約</th>
+          
         </tr>
       </thead>
       <tbody class="content">
@@ -154,6 +156,8 @@
               </div>
             </div>
           </td>
+          <td><button class="button reminderButton">取消</button>
+
 
           <!-- <td>陳曉華</td>
                  <td>chenxiaohua@gmail.com</td>
@@ -206,6 +210,7 @@
               </div>
             </div>
           </td>
+          <td><button class="button reminderButton">取消</button>
 
         <tr>
           <!-- tablerow -->
@@ -256,6 +261,7 @@
             </div>
           </td>
 
+          <td><button class="button reminderButton">取消</button>
 
           <!-- <td>陳曉華</td>
                      <td>chenxiaohua@gmail.com</td>
@@ -310,6 +316,7 @@
               </div>
             </div>
           </td>
+          <td><button class="button reminderButton">取消</button>
 
 
           <!-- <td>陳曉華</td>
@@ -334,7 +341,21 @@
       $('#maTable').DataTable();
     });
   </script>
+<!-- 取消按鈕 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var buttons = document.querySelectorAll('.reminderButton');
+      buttons.forEach(function(button) {
+          button.addEventListener('click', function() {
+              this.innerHTML = '已取消';
+              this.classList.add('disabled');
+              this.disabled = true;
 
+              // 在這裡添加你發送催繳請求的代碼，例如使用AJAX請求
+          });
+      });
+  });
+</script>
 </body>
 
 </html>
