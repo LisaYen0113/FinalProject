@@ -24,13 +24,11 @@
         <img src="hero.png" alt="" class="product-img">
 
         <div class="product-text">
-            <h1 class="product-title">Instrument Rental</h1>
-            <h1 class="product-titl">儀器租借網站</h1>
-
+            <h1 class="product-title">輔大貴重儀器預約系統</h1>
         </div>
 
         <div class="product-desc">
-            <p>Fu Jen Catholic University</p>
+            <p>The pure comfort is here !</p>
             <a href="../index.html"><button>reserve now</button></a>
         </div>
     </div>
@@ -46,7 +44,7 @@
             height: 100vh;
             font-family: 'poppins';
             font-size: 14px;
-            background-color: #bcd7d9;
+            background-color: #a4baac;
             color: #fff;
             overflow: hidden;
         }
@@ -100,33 +98,27 @@
         }
         
         .product-img {
-            width: 300px;
+            width: 500px;
             position: absolute;
             top: 50%;
-            right: 10%;
-            transform: translate(-15%, -50%);
+            left: 50%;
+            transform: translate(-50%, -40%);
             z-index: 2;
         }
         
         .product-text {
             position: absolute;
-            top: 50%;
-            left: 30%;
+            top: 43%;
+            left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
         
         .product-title {
-            color: #536853;
+            color: #edd487;
             font-weight: 900;
-            letter-spacing: 5px;
-            font-size: 100px;
-        }
-        .product-titl {
-            color: #536853;
-            font-weight: 300;
-            letter-spacing: 5px;
-            font-size: 100px;
+            letter-spacing: -10px;
+            font-size: 120px;
         }
         
         .product-desc {
@@ -147,7 +139,7 @@
         
         .product-desc button {
             margin-top: 10px;
-            background: #f2d16b;
+            background: #efd074;
             color: black;
             font-weight: bold;
             padding: 15px 30px;
@@ -257,12 +249,6 @@
             top: 66.6%;
         }
 
-
-
-
-
-        
-
     </style>
 
     <script>
@@ -350,12 +336,6 @@
         })
 
         TweenMax.from('.product-title', 3, {
-            delay: 2.2,
-            opacity: 0,
-            y: 50,
-            ease: Expo.easeInOut
-        })
-        TweenMax.from('.product-titl', 3, {
             delay: 2.2,
             opacity: 0,
             y: 50,
