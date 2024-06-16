@@ -187,14 +187,14 @@ body {
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #758495;
+            background-color: #bdbdbd;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
         #feedback-form button:hover {
-            background-color: #0056b3;
+            background-color: #b3cad4;
         }
 
 /* .feedback-form button {
