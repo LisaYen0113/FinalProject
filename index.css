@@ -217,7 +217,7 @@ a {
 }
 
 button {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
     font-weight: 500;
